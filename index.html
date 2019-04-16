@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Recite your prayers - Manglish</title>
-  <base href="/manglish/">
+  <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -12,11 +12,43 @@
 
 <body>
   <app-root></app-root>
-<script type="text/javascript" src="../manglish/runtime.js"></script>
-<script type="text/javascript" src="polyfills.js"></script>
-  <script type="text/javascript" src="styles.js"></script>
-  <script type="text/javascript" src="scripts.js"></script>
-  <script type="text/javascript" src="vendor.js">
-  </script><script type="text/javascript" src="main.js"></script></body>
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="scripts.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){    
+    
+    $('.navbar-nav>li>a').on('click', function () {
+        
+        var menuText = $(this).text();
+        if(menuText == "Worship")
+        {
+          $('nav').css('background-color','#2196f3');
+        }
+        else if(menuText == "Psalms")
+        {
+          $('nav').css('background-color','#3f51b5');
+        }
+        else if(menuText == "Hymns")
+        {
+          $('nav').css('background-color','#673ab7');
+        }
+        else if(menuText == "Lyrics")
+        {
+          $('nav').css('background-color','#00bcd4');
+        }
+        else if(menuText == "Second order of service")
+        {
+          $('nav').css('background-color','#009688');
+        }
+        else if(menuText == "Dox")
+        {
+          $('nav').css('background-color','#4caf50');
+        }
+
+    });
+  });
+
+</script>
 
 </html>
