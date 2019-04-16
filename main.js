@@ -601,6 +601,7 @@ module.exports = "<div class=\"accordion\" id=\"accordionExample\">\r\n    <div 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorshipComponent", function() { return WorshipComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_common_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../service/common.service */ "./src/service/common.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -611,10 +612,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var WorshipComponent = /** @class */ (function () {
-    function WorshipComponent() {
+    function WorshipComponent(commonService) {
+        this.commonService = commonService;
     }
     WorshipComponent.prototype.ngOnInit = function () {
+        this.commonService.getPrayerList().subscribe(function (data) { });
     };
     WorshipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -622,7 +626,7 @@ var WorshipComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./worship.component.html */ "./src/app/worship/worship.component.html"),
             styles: [__webpack_require__(/*! ./worship.component.css */ "./src/app/worship/worship.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_service_common_service__WEBPACK_IMPORTED_MODULE_1__["CommonService"]])
     ], WorshipComponent);
     return WorshipComponent;
 }());
