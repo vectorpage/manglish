@@ -1,0 +1,2 @@
+# manglish
+recite prayers
