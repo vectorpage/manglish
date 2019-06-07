@@ -41,7 +41,7 @@ module.exports = "/* Navigation Bar */\r\nnav{\r\n    box-shadow: 0 4px 8px 0 rg
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<script type=\"text/javascript\">\n\n    $(document).ready(function(){    \n      \n      $('.navbar-nav>li>a').on('click', function () {\n          \n          var menuText = $(this).text();\n          if(menuText == \"Worship\")\n          {\n            $('nav').css('background-color','#2196f3');\n          }\n          else if(menuText == \"Psalms\")\n          {\n            $('nav').css('background-color','#3f51b5');\n          }\n          else if(menuText == \"Hymns\")\n          {\n            $('nav').css('background-color','#673ab7');\n          }\n          else if(menuText == \"Lyrics\")\n          {\n            $('nav').css('background-color','#00bcd4');\n          }\n          else if(menuText == \"Second order of service\")\n          {\n            $('nav').css('background-color','#009688');\n          }\n          else if(menuText == \"Dox\")\n          {\n            $('nav').css('background-color','#4caf50');\n          }\n  \n      });\n    });\n  \n  </script>\n\n<div>\n  <nav class=\"navbar navbar-expand-md navbar-light fixed-top justify-content-center \">\n      <a class=\"navbar-brand\" href=\"#\">CSI Worship Order</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapsingNavbar\">\n          <span class=\"navbar-toggler-icon\"></span>\n      </button>\n      <div class=\"navbar-collapse collapse w-100\" id=\"collapsingNavbar\">\n          <ul class=\"navbar-nav w-100 justify-content-center\">\n              <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                  <a class=\"nav-link py-0\" href=\"#\" routerLink=\"worship\">Worship</a>\n              </li>\n              <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                  <a class=\"nav-link py-0\" href=\"#\" routerLink=\"psalms\">Psalms</a>\n              </li>\n              <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                  <a class=\"nav-link py-0\" href=\"#\" routerLink=\"hymns\">Hymns</a>\n              </li>\n              <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                  <a class=\"nav-link py-0\" href=\"#\" routerLink=\"lyrics\">Lyrics</a>\n              </li>\n              <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                  <a class=\"nav-link py-0\" href=\"#\" routerLink=\"second\">Second order of service</a>\n              </li>\n              <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                  <a class=\"nav-link py-0\" href=\"#\" routerLink=\"dox\">Dox</a>\n              </li>\n          </ul>\n      </div>\n  </nav>\n</div>\n\n<div class=\"container content-box\">\n  <router-outlet></router-outlet>\n</div>\n\n\n"
+module.exports = "<script type=\"text/javascript\">\n\n  $(document).ready(function () {\n\n    $('.navbar-nav>li>a').on('click', function () {\n\n      var menuText = $(this).text();\n      if (menuText == \"Worship\") {\n        $('nav').css('background-color', '#2196f3');\n      }\n      else if (menuText == \"Psalms\") {\n        $('nav').css('background-color', '#3f51b5');\n      }\n      else if (menuText == \"Hymns\") {\n        $('nav').css('background-color', '#673ab7');\n      }\n      else if (menuText == \"Lyrics\") {\n        $('nav').css('background-color', '#00bcd4');\n      }\n      else if (menuText == \"Second order of service\") {\n        $('nav').css('background-color', '#009688');\n      }\n      else if (menuText == \"Dox\") {\n        $('nav').css('background-color', '#4caf50');\n      }\n\n    });\n  });\n\n</script>\n\n<div>\n  <nav class=\"navbar navbar-expand-md navbar-light fixed-top justify-content-center \">\n    <a class=\"navbar-brand\" href=\"#\">CSI Worship Order</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapsingNavbar\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"navbar-collapse collapse w-100\" id=\"collapsingNavbar\">\n      <ul class=\"navbar-nav w-100 justify-content-center\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"worship\">Worship</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"psalms\">Psalms</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"hymns\">Hymns</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"lyrics\">Lyrics</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"second\">Second order of service</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"dox\">Dox</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"float-right\">\n      <div class=\"input-group\">\n        <input #srchid type=\"text\" class=\"form-control\" placeholder=\"Search\" aria-label=\"Search\"\n          aria-describedby=\"Search\" name=\"srchid\">\n        <div class=\"input-group-append\">\n          <button class=\"btn\" (click)=\"onSearch(srchid.value)\">Search</button>\n        </div>\n      </div>\n    </div>\n  </nav>\n</div>\n\n<div class=\"container content-box\">\n  <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -56,23 +56,33 @@ module.exports = "<script type=\"text/javascript\">\n\n    $(document).ready(fun
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(router) {
+        this.router = router;
         this.title = 'manglish';
     }
+    AppComponent.prototype.onSearch = function (searchTerm) {
+        this.router.navigate(['/search/' + searchTerm]);
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -101,15 +111,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hymns_hymns_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hymns/hymns.component */ "./src/app/hymns/hymns.component.ts");
 /* harmony import */ var _psalms_psalms_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./psalms/psalms.component */ "./src/app/psalms/psalms.component.ts");
 /* harmony import */ var _worship_worship_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./worship/worship.component */ "./src/app/worship/worship.component.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _results_results_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./results/results.component */ "./src/app/results/results.component.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -149,6 +161,14 @@ var appRoutes = [
         component: _worship_worship_component__WEBPACK_IMPORTED_MODULE_9__["WorshipComponent"]
     },
     {
+        path: 'search',
+        component: _results_results_component__WEBPACK_IMPORTED_MODULE_10__["ResultsComponent"]
+    },
+    {
+        path: 'search/:term',
+        component: _results_results_component__WEBPACK_IMPORTED_MODULE_10__["ResultsComponent"]
+    },
+    {
         path: '',
         redirectTo: '/worship',
         pathMatch: 'full'
@@ -171,13 +191,14 @@ var AppModule = /** @class */ (function () {
                 _lyrics_lyrics_component__WEBPACK_IMPORTED_MODULE_6__["LyricsComponent"],
                 _hymns_hymns_component__WEBPACK_IMPORTED_MODULE_7__["HymnsComponent"],
                 _psalms_psalms_component__WEBPACK_IMPORTED_MODULE_8__["PsalmsComponent"],
-                _worship_worship_component__WEBPACK_IMPORTED_MODULE_9__["WorshipComponent"]
+                _worship_worship_component__WEBPACK_IMPORTED_MODULE_9__["WorshipComponent"],
+                _results_results_component__WEBPACK_IMPORTED_MODULE_10__["ResultsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(appRoutes),
-                _angular_fire__WEBPACK_IMPORTED_MODULE_10__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_12__["environment"].firebaseConfig),
-                _angular_fire_database__WEBPACK_IMPORTED_MODULE_11__["AngularFireDatabaseModule"]
+                _angular_fire__WEBPACK_IMPORTED_MODULE_11__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].firebaseConfig),
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__["AngularFireDatabaseModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -499,6 +520,127 @@ var PsalmsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_service_common_service__WEBPACK_IMPORTED_MODULE_1__["CommonService"]])
     ], PsalmsComponent);
     return PsalmsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/results/results.component.css":
+/*!***********************************************!*\
+  !*** ./src/app/results/results.component.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/results/results.component.html":
+/*!************************************************!*\
+  !*** ./src/app/results/results.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div align=\"center\" style=\"margin-top:6%;\">\n  <h2>Your Searched Results</h2>\n</div>\n<ng-container *ngFor=\"let searchheader of searchHeaderList; let i=index\">\n  <div class=\"accordion\" [attr.id]=\"'accordion' + i\">\n    <div class=\"card\">\n      <div class=\"card-header\" [attr.id]=\"'heading' + i\">\n        <h5 class=\"mb-0\">\n          <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" [attr.data-target]=\"'#collapse' + i\"\n            aria-expanded=\"true\" [attr.aria-controls]=\"'collapse' + i\">\n            {{searchheader}}\n          </button>\n        </h5>\n      </div>\n      <div [attr.id]=\"'collapse' + i\" class=\"collapse hide angular-with-newlines\" [attr.aria-labelledby]=\"'heading'+ i\"\n        [attr.data-parent]=\"'#accordion' + i\">\n        <div class=\"card-body\">\n          {{searchValueList[i]}}\n        </div>\n      </div>\n    </div>\n  </div>\n</ng-container>"
+
+/***/ }),
+
+/***/ "./src/app/results/results.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/results/results.component.ts ***!
+  \**********************************************/
+/*! exports provided: ResultsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResultsComponent", function() { return ResultsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _service_common_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../service/common.service */ "./src/service/common.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ResultsComponent = /** @class */ (function () {
+    function ResultsComponent(route, commonService) {
+        var _this = this;
+        this.route = route;
+        this.commonService = commonService;
+        this.searchHeaderList = [];
+        this.searchValueList = [];
+        this.prayerHeaderList = [];
+        this.prayerValueList = [];
+        route.params.subscribe(function (val) {
+            _this.searchResults(_this.route.snapshot.paramMap.get("term"));
+        });
+    }
+    ResultsComponent.prototype.ngOnInit = function () {
+    };
+    ResultsComponent.prototype.searchResults = function (searchWord) {
+        //alert(searchWord);
+        var _this = this;
+        this.commonService.getPrayerList().subscribe(function (data) {
+            var headerTempList, valTempList = "";
+            data.forEach(function (pitem) {
+                //console.log(pitem.key);
+                if (pitem.key.indexOf('header') >= 0) {
+                    //headerTempList = pitem.payload.val();
+                    headerTempList = headerTempList + pitem.payload.val() + ",";
+                }
+                if (pitem.key.indexOf('content') >= 0) {
+                    //valTempList = pitem.payload.val();
+                    valTempList = valTempList + pitem.payload.val() + ",";
+                }
+            });
+            //trim extra characters
+            headerTempList = headerTempList.substring(0, headerTempList.length - 1);
+            valTempList = valTempList.substring(0, valTempList.length - 1);
+            //console.log(headerTempList);
+            //console.log(valTempList);
+            _this.prayerHeaderList = headerTempList.split(',');
+            var re = /\|/gi;
+            var tList = valTempList.replace(re, "\n\n");
+            _this.prayerValueList = tList.split(',');
+            var searchHeader, searchValue = "";
+            for (var i = 0; i < _this.prayerHeaderList.length; i++) {
+                var sentenceHeader = _this.prayerHeaderList[i].toLowerCase();
+                var sentenceValue = _this.prayerValueList[i].toLowerCase();
+                console.log('Searching');
+                if (sentenceHeader.indexOf(searchWord.toLowerCase()) >= 0) {
+                    searchHeader = searchHeader + _this.prayerHeaderList[i] + ",";
+                    searchValue = searchValue + _this.prayerValueList[i] + ",";
+                }
+            }
+            console.log('Searching Complete');
+            //trim extra characters
+            searchHeader = searchHeader.substring(0, searchHeader.length - 1).replace('undefined', '');
+            searchValue = searchValue.substring(0, searchValue.length - 1).replace('undefined', '');
+            _this.searchHeaderList = searchHeader.split(',');
+            _this.searchValueList = searchValue.split(',');
+            console.log(_this.searchHeaderList.length);
+        });
+    };
+    ResultsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-results',
+            template: __webpack_require__(/*! ./results.component.html */ "./src/app/results/results.component.html"),
+            styles: [__webpack_require__(/*! ./results.component.css */ "./src/app/results/results.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _service_common_service__WEBPACK_IMPORTED_MODULE_2__["CommonService"]])
+    ], ResultsComponent);
+    return ResultsComponent;
 }());
 
 
