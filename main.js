@@ -41,7 +41,7 @@ module.exports = "/* Navigation Bar */\r\nnav{\r\n    box-shadow: 0 4px 8px 0 rg
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<script type=\"text/javascript\">\n\n  $(document).ready(function () {\n\n    $('.navbar-nav>li>a').on('click', function () {\n\n      var menuText = $(this).text();\n      if (menuText == \"Worship\") {\n        $('nav').css('background-color', '#2196f3');\n      }\n      else if (menuText == \"Psalms\") {\n        $('nav').css('background-color', '#3f51b5');\n      }\n      else if (menuText == \"Hymns\") {\n        $('nav').css('background-color', '#673ab7');\n      }\n      else if (menuText == \"Lyrics\") {\n        $('nav').css('background-color', '#00bcd4');\n      }\n      else if (menuText == \"Second order of service\") {\n        $('nav').css('background-color', '#009688');\n      }\n      else if (menuText == \"Dox\") {\n        $('nav').css('background-color', '#4caf50');\n      }\n\n    });\n  });\n\n</script>\n\n<div>\n  <nav class=\"navbar navbar-expand-md navbar-light fixed-top justify-content-center \">\n    <a class=\"navbar-brand\" href=\"#\">CSI Worship Order</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapsingNavbar\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"navbar-collapse collapse w-100\" id=\"collapsingNavbar\">\n      <ul class=\"navbar-nav w-100 justify-content-center\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"worship\">Worship</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"psalms\">Psalms</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"hymns\">Hymns</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"lyrics\">Lyrics</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"second\">Second order of service</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"dox\">Dox</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"float-right\">\n      <div class=\"input-group\">\n        <input #srchid type=\"text\" class=\"form-control\" placeholder=\"Search\" aria-label=\"Search\"\n          aria-describedby=\"Search\" name=\"srchid\">\n        <div class=\"input-group-append\">\n          <button class=\"btn\" (click)=\"onSearch(srchid.value)\">Search</button>\n        </div>\n      </div>\n    </div>\n  </nav>\n</div>\n\n<div class=\"container content-box\">\n  <router-outlet></router-outlet>\n</div>"
+module.exports = "<script type=\"text/javascript\">\n\n  $(document).ready(function () {\n\n    $('.navbar-nav>li>a').on('click', function () {\n\n      var menuText = $(this).text();\n      if (menuText == \"Worship\") {\n        $('nav').css('background-color', '#2196f3');\n      }\n      else if (menuText == \"Psalms\") {\n        $('nav').css('background-color', '#3f51b5');\n      }\n      else if (menuText == \"Hymns\") {\n        $('nav').css('background-color', '#673ab7');\n      }\n      else if (menuText == \"Lyrics\") {\n        $('nav').css('background-color', '#00bcd4');\n      }\n      else if (menuText == \"Second order of service\") {\n        $('nav').css('background-color', '#009688');\n      }\n      else if (menuText == \"Dox\") {\n        $('nav').css('background-color', '#4caf50');\n      }\n\n    });\n  });\n\n</script>\n\n<div>\n  <nav class=\"navbar navbar-expand-md navbar-light fixed-top justify-content-center \">\n    <a class=\"navbar-brand\" href=\"#\">CSI Worship Order</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapsingNavbar\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"navbar-collapse collapse w-100\" id=\"collapsingNavbar\">\n      <ul class=\"navbar-nav w-100 justify-content-center\">\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"worship\">Worship</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"psalms\">Psalms</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"hymns\">Hymns</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"lyrics\">Lyrics</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"second\">Second order of service</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" routerLink=\"dox\">Dox</a>\n        </li>\n        <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n          <a class=\"nav-link py-0\" href=\"#\" data-toggle=\"modal\" data-target=\"#exampleModal\">Search</a>\n        </li>\n      </ul>\n    </div>\n  </nav>\n</div>\n<!-- Modal -->\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\"\n  aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"exampleModalLabel\">Choose Filter and Search</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"input-group\">\n          Filter\n        </div>\n        <br/>\n        <div class=\"input-group\">\n          <select #filter_prayers name=\"filter_prayers\" id=\"filter_prayers\">\n            <option value=\"all\">All</option>\n            <option value=\"hymns_header\">HymnNo/Title/Ocassion</option>\n            <option value=\"hymns_content\">HymnWords/Tune</option>\n            <option value=\"lyrics_header\">LyricNo/Title/Ocassion</option>\n            <option value=\"lyrics_content\">LyricWords</option>\n            <option value=\"psalm_header\">PsalmNo</option>\n            <option value=\"psalm_content\">PsalmWords</option>\n          </select>\n        </div>\n        <br/>\n        <div class=\"input-group\">\n          <input #srchid type=\"text\" class=\"form-control\" placeholder=\"Search Hymns Lyrics Psalms\"\n            aria-label=\"Search Hymns Lyrics Psalms\" aria-describedby=\"Search Hymns Lyrics Psalms\" name=\"srchid\">\n        </div>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"onSearch(srchid.value, filter_prayers.value)\">Search</button>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"container-fluid content-box\">\n  <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -73,8 +73,9 @@ var AppComponent = /** @class */ (function () {
         this.router = router;
         this.title = 'manglish';
     }
-    AppComponent.prototype.onSearch = function (searchTerm) {
-        this.router.navigate(['/search/' + searchTerm]);
+    AppComponent.prototype.onSearch = function (searchTerm, filterValue) {
+        //console.log("Filter " + filterValue);
+        this.router.navigate(['/search/' + searchTerm + '/' + filterValue]);
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -165,7 +166,7 @@ var appRoutes = [
         component: _results_results_component__WEBPACK_IMPORTED_MODULE_10__["ResultsComponent"]
     },
     {
-        path: 'search/:term',
+        path: 'search/:term/:filter',
         component: _results_results_component__WEBPACK_IMPORTED_MODULE_10__["ResultsComponent"]
     },
     {
@@ -583,32 +584,57 @@ var ResultsComponent = /** @class */ (function () {
         this.prayerHeaderList = [];
         this.prayerValueList = [];
         route.params.subscribe(function (val) {
-            _this.searchResults(_this.route.snapshot.paramMap.get("term"));
+            _this.searchResults(_this.route.snapshot.paramMap.get("term"), _this.route.snapshot.paramMap.get("filter"));
         });
     }
     ResultsComponent.prototype.ngOnInit = function () {
     };
-    ResultsComponent.prototype.searchResults = function (searchWord) {
-        //alert(searchWord);
+    ResultsComponent.prototype.searchResults = function (searchWord, filterValue) {
         var _this = this;
+        console.log("FilterValueHeader: " + filterValue);
         this.commonService.getPrayerList().subscribe(function (data) {
             var headerTempList, valTempList = "";
             data.forEach(function (pitem) {
-                //console.log(pitem.key);
-                if (pitem.key.indexOf('header') >= 0) {
-                    //headerTempList = pitem.payload.val();
-                    headerTempList = headerTempList + pitem.payload.val() + ",";
+                if (filterValue == "all") {
+                    if (pitem.key.indexOf('header') >= 0) {
+                        //headerTempList = pitem.payload.val();
+                        headerTempList = headerTempList + pitem.payload.val() + ",";
+                    }
+                    if (pitem.key.indexOf('content') >= 0) {
+                        //valTempList = pitem.payload.val();
+                        valTempList = valTempList + pitem.payload.val() + ",";
+                    }
                 }
-                if (pitem.key.indexOf('content') >= 0) {
-                    //valTempList = pitem.payload.val();
-                    valTempList = valTempList + pitem.payload.val() + ",";
+                else if (filterValue == "hymns_header" || filterValue == "hymns_content") {
+                    if (pitem.key.indexOf('hymns_header') >= 0) {
+                        headerTempList = headerTempList + pitem.payload.val() + ",";
+                    }
+                    if (pitem.key.indexOf('hymns_content') >= 0) {
+                        valTempList = valTempList + pitem.payload.val() + ",";
+                    }
+                }
+                else if (filterValue == "psalm_header" || filterValue == "psalm_content") {
+                    if (pitem.key.indexOf('psalm_header') >= 0) {
+                        headerTempList = headerTempList + pitem.payload.val() + ",";
+                    }
+                    if (pitem.key.indexOf('psalm_content') >= 0) {
+                        valTempList = valTempList + pitem.payload.val() + ",";
+                    }
+                }
+                else if (filterValue == "lyrics_header" || filterValue == "lyrics_content") {
+                    if (pitem.key.indexOf('lyrics_header') >= 0) {
+                        headerTempList = headerTempList + pitem.payload.val() + ",";
+                    }
+                    if (pitem.key.indexOf('lyrics_content') >= 0) {
+                        valTempList = valTempList + pitem.payload.val() + ",";
+                    }
                 }
             });
             //trim extra characters
             headerTempList = headerTempList.substring(0, headerTempList.length - 1);
             valTempList = valTempList.substring(0, valTempList.length - 1);
-            //console.log(headerTempList);
-            //console.log(valTempList);
+            //console.log("Header " + headerTempList);
+            //console.log("Value " + valTempList);
             _this.prayerHeaderList = headerTempList.split(',');
             var re = /\|/gi;
             var tList = valTempList.replace(re, "\n\n");
@@ -617,16 +643,34 @@ var ResultsComponent = /** @class */ (function () {
             for (var i = 0; i < _this.prayerHeaderList.length; i++) {
                 var sentenceHeader = _this.prayerHeaderList[i].toLowerCase();
                 var sentenceValue = _this.prayerValueList[i].toLowerCase();
-                console.log('Searching');
-                if (sentenceHeader.indexOf(searchWord.toLowerCase()) >= 0) {
-                    searchHeader = searchHeader + _this.prayerHeaderList[i] + ",";
-                    searchValue = searchValue + _this.prayerValueList[i] + ",";
+                if (filterValue == "all") {
+                    console.log('Searching in all' + sentenceHeader + " " + sentenceValue);
+                    if (sentenceHeader.indexOf(searchWord.toLowerCase()) >= 0 ||
+                        sentenceValue.indexOf(searchWord.toLowerCase()) >= 0) {
+                        searchHeader = searchHeader + _this.prayerHeaderList[i] + ",";
+                        searchValue = searchValue + _this.prayerValueList[i] + ",";
+                    }
+                }
+                else if (filterValue.indexOf("header") >= 0) {
+                    console.log('Searching in header' + sentenceHeader + " " + sentenceValue);
+                    if (sentenceHeader.indexOf(searchWord.toLowerCase()) >= 0) {
+                        searchHeader = searchHeader + _this.prayerHeaderList[i] + ",";
+                        searchValue = searchValue + _this.prayerValueList[i] + ",";
+                    }
+                }
+                else if (filterValue.indexOf("content") >= 0) {
+                    console.log('Searching in content' + sentenceHeader + " " + sentenceValue);
+                    if (sentenceValue.indexOf(searchWord.toLowerCase()) >= 0) {
+                        searchHeader = searchHeader + _this.prayerHeaderList[i] + ",";
+                        searchValue = searchValue + _this.prayerValueList[i] + ",";
+                    }
                 }
             }
-            console.log('Searching Complete');
+            console.log('Searching Complete' + searchHeader);
             //trim extra characters
             searchHeader = searchHeader.substring(0, searchHeader.length - 1).replace('undefined', '');
             searchValue = searchValue.substring(0, searchValue.length - 1).replace('undefined', '');
+            console.log('Searching Complete' + searchHeader);
             _this.searchHeaderList = searchHeader.split(',');
             _this.searchValueList = searchValue.split(',');
             console.log(_this.searchHeaderList.length);
